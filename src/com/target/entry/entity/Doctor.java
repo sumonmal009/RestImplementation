@@ -28,4 +28,10 @@ public class Doctor  {
 	public void setSpecialization(String specialization) {
 		this.specialization = specialization;
 	}
+	@Override
+	public String toString() {
+		return "Doctor [" + (doctorId != null ? "doctorId=" + doctorId + ", " : "")
+				+ (doctorName != null ? "doctorName=" + doctorName + ", " : "")
+				+ (specialization != null ? "specialization=" + specialization : "") + "]";
+	}
 }

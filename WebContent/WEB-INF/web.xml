@@ -28,7 +28,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jersey Web Application</servlet-name>
-		<url-pattern>/entrymgmt/*</url-pattern>
+		<url-pattern>/do/*</url-pattern>
 	</servlet-mapping>
 
 </web-app>

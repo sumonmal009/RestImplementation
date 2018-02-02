@@ -36,11 +36,11 @@ public class DoctorOperator {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("/addDoctor")
-	public Response addDoctor(Doctor doctor) {
+	@Path("/deleteDoctor")
+	public Response deleteDoctor(Doctor doctor) {
 		String msg=null;
 		if(DoctorRecord.doctorRecordTable.containsKey(doctor.getDoctorId())){
-			msg="Doctor with ID is already present, can not add the same, if you want to update please use update api.";
+			msg="Doctor with ID is already present, can not delete the same, if you want to update please use update api.";
 			return	ResponseBuilder.getResponse(msg,Status.NOT_ACCEPTABLE);
 		}else {
 			DoctorRecord.doctorRecordTable.put(doctor.getDoctorId(), doctor);

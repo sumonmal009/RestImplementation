@@ -6,16 +6,16 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Patient {
-	int patientID;
+	String patientID;
 	String patientName;
-	String patientAddress;
+	String patientdeleteress;
 	int patientPhone;
 	int patientReportID;
 	
-	public int getPatientID() {
+	public String getPatientID() {
 		return patientID;
 	}
-	public void setPatientID(int patientID) {
+	public void setPatientID(String patientID) {
 		this.patientID = patientID;
 	}
 	public String getPatientName() {
@@ -24,11 +24,11 @@ public class Patient {
 	public void setPatientName(String patientName) {
 		this.patientName = patientName;
 	}
-	public String getPatientAddress() {
-		return patientAddress;
+	public String getPatientdeleteress() {
+		return patientdeleteress;
 	}
-	public void setPatientAddress(String patientAddress) {
-		this.patientAddress = patientAddress;
+	public void setPatientdeleteress(String patientdeleteress) {
+		this.patientdeleteress = patientdeleteress;
 	}
 	public int getPatientPhone() {
 		return patientPhone;

@@ -1,0 +1,30 @@
+http://localhost:8080//EntryManagement/do/delete/doctor
+http://localhost:8080//EntryManagement/do/delete/patient
+http://localhost:8080//EntryManagement/do/delete/report
+http://localhost:8080//EntryManagement/do/delete/specialist
+	
+http://localhost:8080//EntryManagement/do/modify/doctor
+http://localhost:8080//EntryManagement/do/modify/patient
+http://localhost:8080//EntryManagement/do/modify/report
+http://localhost:8080//EntryManagement/do/modify/specialist
+
+http://localhost:8080//EntryManagement/do/delete/doctor
+http://localhost:8080//EntryManagement/do/delete/patient
+http://localhost:8080//EntryManagement/do/delete/report
+http://localhost:8080//EntryManagement/do/delete/specialist
+
+http://localhost:8080//EntryManagement/do/get/doctor
+http://localhost:8080//EntryManagement/do/get/doctor/{id}
+http://localhost:8080//EntryManagement/do/get/patient
+http://localhost:8080//EntryManagement/do/get/patient/{id}
+http://localhost:8080//EntryManagement/do/get/report
+http://localhost:8080//EntryManagement/do/get/report/{id}
+http://localhost:8080//EntryManagement/do/get/specialist
+http://localhost:8080//EntryManagement/do/get/specialist/{specility}
+	
+http://localhost:8080//EntryManagement/do/query/report_for_patient/{patient_id}
+http://localhost:8080//EntryManagement/do/query/last_visitd_doctor_for_patient/{patient_id}
+
+	
+ 	//send ids with request body - post
+	//get with request param

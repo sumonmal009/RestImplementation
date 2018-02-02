@@ -8,13 +8,13 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Entry {
-	int doctorID;
+	String doctorID;
 	Time time;
 	String note;
-	public int getDoctorID() {
+	public String getDoctorID() {
 		return doctorID;
 	}
-	public void setDoctorID(int doctorID) {
+	public void setDoctorID(String doctorID) {
 		this.doctorID = doctorID;
 	}
 	public Time getTime() {

@@ -12,5 +12,5 @@ import lombok.Setter;
 public class PatientRecord extends PersistanceFeature {
 	@Setter
 	@Getter
-	Map<String, Patient> patientRecordTable = new HashMap<String, Patient>(); // <patientId,Patient>
+	public static Map<String, Patient> patientRecordTable = new HashMap<String, Patient>(); // <patientId,Patient>
 }

@@ -12,5 +12,5 @@ import lombok.Setter;
 public class ReportsRecord extends PersistanceFeature {
 	@Setter
 	@Getter
-	Map<String, Report> reportsRecordTable = new HashMap<String, Report>(); // <reportId,Report>
+	public static Map<String, Report> reportsRecordTable = new HashMap<String, Report>(); // <reportId,Report>
 }

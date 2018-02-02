@@ -8,26 +8,26 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Report {
-	int reportID;
-	int patientID;
-	int doctorID;
+	String reportID;
+	String patientID;
+	String doctorID;
 	List<Entry> doctorComment;
-	public int getReportID() {
+	public String getReportID() {
 		return reportID;
 	}
-	public void setReportID(int reportID) {
+	public void setReportID(String reportID) {
 		this.reportID = reportID;
 	}
-	public int getPatientID() {
+	public String getPatientID() {
 		return patientID;
 	}
-	public void setPatientID(int patientID) {
+	public void setPatientID(String patientID) {
 		this.patientID = patientID;
 	}
-	public int getDoctorID() {
+	public String getDoctorID() {
 		return doctorID;
 	}
-	public void setDoctorID(int doctorID) {
+	public void setDoctorID(String doctorID) {
 		this.doctorID = doctorID;
 	}
 	public List<Entry> getDoctorComment() {
