@@ -29,4 +29,19 @@ public class SpecialistDeleteOperation {
 		}
 		return ResponseBuilder.getResponse(Message.ENTRY_SUCCESSFULL+ speciality +" for "+doctorId);
 	}
+	
+	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("/all")
+	public Response deleteSpecialistAll(String speciality) {
+		if (!SpecialistRecord.doctorSpecialistTable.containsKey(speciality)) {
+			return ResponseBuilder.getResponse(Message.NOT_FOUND_FOR_DELETE, Status.NOT_ACCEPTABLE);
+		}else {
+			
+			SpecialistRecord.doctorSpecialistTable.remove(speciality);
+		}
+		return ResponseBuilder.getResponse(Message.ENTRY_SUCCESSFULL+ speciality +" deleted ");
+	}
 }

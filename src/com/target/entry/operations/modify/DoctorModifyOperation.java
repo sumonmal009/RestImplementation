@@ -11,16 +11,21 @@ import javax.ws.rs.core.Response.Status;
 import com.target.entry.entity.Doctor;
 import com.target.entry.operations.util.ResponseBuilder;
 import com.target.entry.persistance.DoctorRecord;
+import com.target.entry.persistance.baseFeature.Message;
+
 @Path("/modify/doctor")
 public class DoctorModifyOperation {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	
-	public Response modifyDoctor(Doctor doctor) {
-		
-		return	ResponseBuilder.getResponse("modifyDoctor");
+
+	public Response ModifyDoctor(Doctor doctor) {
+		if (!DoctorRecord.doctorRecordTable.containsKey(doctor.getDoctorId())) {
+			return ResponseBuilder.getResponse(Message.NOT_FOUND, Status.NOT_ACCEPTABLE);
+		} else {
+			DoctorRecord.doctorRecordTable.put(doctor.getDoctorId(), doctor);
+		}
+		return ResponseBuilder.getResponse(Message.ENTRY_SUCCESSFULL+ doctor);
 	}
-	
-	
+
 }
